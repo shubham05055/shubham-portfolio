@@ -464,9 +464,11 @@ article .icon{
 footer{
     height: 26vh;
     margin: 0rem;
-    background-color: rgb(46, 0, 0);
+    background-color: rgb(228, 184, 184);
 
 }
+
+
 
 Footer p{
     text-align: center;
