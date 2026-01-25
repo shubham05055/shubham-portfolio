@@ -22,18 +22,26 @@
     <nav id="hamburger-nav">
       <div class="logo">Shubham</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="togglemenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="togglemenu()"> About </a></li>
-          <li><a href="#skills" onclick="togglemenu()"> Skills </a></li>
-          <li><a href="#projects" onclick="togglemenu()"> Projects </a></li>
-          <li><a href="#contact" onclick="togglemenu()"> Contact </a></li>
-        </div>
-      </div>
+  <div class="hamburger-icon" onclick="togglemenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- overlay -->
+  <div class="menu-overlay" onclick="togglemenu()"></div>
+
+  <!-- side menu -->
+  <div class="menu-links">
+    <ul>
+      <li><a href="#about" onclick="togglemenu()">About</a></li>
+      <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
+      <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+      <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
     </nav>
     <section id="profile">
       <div class="section__pic-container first-pic">

@@ -68,61 +68,104 @@ a:hover {
 
 /* hamburger */
 
+/* ===== Improved Hamburger Menu ===== */
+
 #hamburger-nav {
   display: none;
 }
 
 .hamburger-menu {
   position: relative;
-  display: inline-block;
 }
 
+/* Hamburger icon */
 .hamburger-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 24px;
-  width: 30px;
+  width: 32px;
   cursor: pointer;
+  z-index: 1002;
 }
 
 .hamburger-icon span {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: black;
+  border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
 
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
+/* Side menu (hidden by default) */
+.menu-links{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  transition: right 0.35s ease-in-out;
+  z-index: 1001;
+  padding: 90px 25px 25px;
+  box-shadow: -10px 0px 25px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+/* Menu list */
+.menu-links ul {
+    margin: 0;
+    padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
+  padding: 12px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
   color: black;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
-.menu-links li {
-  list-style: none;
+.menu-links a:hover {
+  background: rgb(255, 230, 230);
+  color: rgb(182, 0, 24);
+  text-decoration: none;
 }
 
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+/* Open state */
 .menu-links.open {
-  max-height: 300px;
+  right: 0;
 }
 
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animate hamburger icon into X */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+  transform: rotate(45deg) translate(7px, 7px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
@@ -130,20 +173,9 @@ a:hover {
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
 
 /* SECTIONS STYLING */
 
