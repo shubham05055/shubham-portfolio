@@ -22,26 +22,25 @@
     <nav id="hamburger-nav">
       <div class="logo">Shubham</div>
       <div class="hamburger-menu">
-  <div class="hamburger-icon" onclick="togglemenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+        <div class="hamburger-icon" onclick="togglemenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-  <!-- overlay -->
-  <div class="menu-overlay" onclick="togglemenu()"></div>
+        <!-- overlay -->
+        <div class="menu-overlay" onclick="togglemenu()"></div>
 
-  <!-- side menu -->
-  <div class="menu-links">
-    <ul>
-      <li><a href="#about" onclick="togglemenu()">About</a></li>
-      <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
-      <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
-      <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
+        <!-- side menu -->
+        <div class="menu-links">
+          <ul>
+            <li><a href="#about" onclick="togglemenu()">About</a></li>
+            <li><a href="#skills" onclick="togglemenu()">Skills</a></li>
+            <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+            <li><a href="#contact" onclick="togglemenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container first-pic">
@@ -77,6 +76,13 @@
             alt="My github"
             class="icon"
             onclick="location.href = 'https://github.com/shubham05055'"
+          />
+          <img
+            src="./assets/social.png"
+            alt="Other platforms"
+            class="icon"
+            onclick="window.open('https://shubham-smcard.netlify.app/', '_blank')"
+            
           />
         </div>
       </div>
@@ -117,21 +123,17 @@
           </div>
           <div class="text-container">
             <p>
-              I’m a B.A. Hons (Italian) student with strong communication skills
-              in Italian (B2 level), with 3+ years of consistent learning and
-              practical language use. I have a solid command of Hindi (native)
-              and English, which helps me communicate confidently across
-              different environments. Along with my language expertise, I
-              possess strong technical proficiency in MS PowerPoint and Advanced
-              Excel, allowing me to create well-structured presentations, manage
-              data efficiently, and support academic or professional tasks. In
-              addition, I am currently learning frontend development (HTML, CSS,
-              JavaScript, and React fundamentals) to build clean, responsive,
-              and user-friendly websites. I am a motivated and detail-oriented
-              individual who enjoys combining language skills with creativity
-              and technology. I am always focused on continuous improvement,
-              expanding my knowledge, and developing new skills to grow
-              professionally.
+              Here’s a **100-word version**: I’m a B.A. Hons (Italian) student
+              with strong communication skills in Italian (B2 level) and 3+
+              years of consistent learning and practical language use. I also
+              have a solid command of Hindi (native) and English, enabling
+              confident communication in diverse environments. Along with my
+              language expertise, I am proficient in MS PowerPoint and Advanced
+              Excel, helping me create structured presentations and manage data
+              efficiently. Additionally, I am learning frontend development
+              (HTML, CSS, JavaScript, and React fundamentals) to build clean,
+              responsive, user-friendly websites. I am motivated,
+              detail-oriented, and focused on continuous improvement.
             </p>
           </div>
         </div>
@@ -338,7 +340,6 @@
               >
                 See more...
               </button>
-              
             </div>
           </div>
           <div class="details-container color-container">
@@ -357,7 +358,6 @@
               >
                 See more...
               </button>
-              
             </div>
           </div>
           <div class="details-container color-container">
@@ -372,11 +372,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color2 project-btn"
-                onclick="location.href = 'https://github.com/shubham05055?tab=repositories'"
+                onclick="
+                  location.href =
+                    'https://github.com/shubham05055?tab=repositories'
+                "
               >
                 See more...
               </button>
-              
             </div>
           </div>
         </div>
